@@ -1,0 +1,132 @@
+body {
+	font-family: "Verdana";
+}
+
+.container {
+	width: auto;
+	height: auto;
+	display: block;
+}
+
+.container .topContainerMatch {
+	display: flex;
+	width: inherit;
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.4em;
+}
+
+.container .middleContainer {
+	display: flex;
+	width: inherit;
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #28B09E;
+}
+
+.container .bottomContainerMatch {
+	display: flex;
+	padding-bottom: 15em;
+}
+
+.container .topContainerMatch .halfTopContainer {
+	display: flex;
+	width: 50%;
+	height: inherit;
+	width: inherit;
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .topContainerMatch .halfTopContainer .leftTeamLogo {
+	width: 10em;
+	height: 10em;
+}
+
+.container .topContainerMatch .halfTopContainer .leftTeamLogo img {
+	width: inherit;
+	height: inherit;
+}
+
+.container .topContainerMatch .halfTopContainer .rightTeamLogo {
+	width: 10em;
+	height: 10em;
+}
+
+.container .topContainerMatch .halfTopContainer .rightTeamLogo img {
+	width: inherit;
+	height: inherit;
+}
+
+.container .topContainerMatch .halfTopContainer .leftTeamScore {
+	padding-right: 1em;
+	font-size: 40px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.container .topContainerMatch .halfTopContainer .rightTeamScore {
+	padding-left: .8em;
+	font-size: 40px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.container .topContainerMatch .halfTopContainer .leftTeamName {
+	font-size: 30px;
+	color: #fff;
+	width: 15em;
+	text-align: center;
+}
+
+.container .topContainerMatch .halfTopContainer .rightTeamName {
+	font-size: 30px;
+	color: #fff;
+	width: 15em;
+	text-align: center;
+}
+
+.container .bottomContainerMatch .halfBottom {
+	display: block;
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: inherit;
+    padding-top: 3em;
+}
+
+.container .bottomContainerMatch .halfBottom .playerContainer {
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .bottomContainerMatch .halfBottom .playerContainer .play {
+	cursor: pointer; 
+	cursor: hand;
+	display: block;
+	border: 3px solid;
+	border-color: #292C33;
+	height: 18em;
+	width: 15em;
+	overflow: hidden;
+	border-radius: 2em;
+	margin-bottom: 2em;
+	box-shadow: 10px 10px 5px #000;
+
+}
+
+.container .bottomContainerMatch .halfBottom .playerContainer .play:active {
+	box-shadow: inset 0 0 10px 10px #000;
+}

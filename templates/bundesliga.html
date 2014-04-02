@@ -1,0 +1,60 @@
+<div class="container" style="background-image:url(backgrounds/blueNew.jpg); background-size: cover; background-position:center">
+        <div class="topContainer">
+          <div class="logo">
+            <img src="images/BundesligaLogo.png" />
+          </div>
+          <div class="bundesliga">BundesLiga</div>
+        </div>
+        <div class="bottomContainer">
+          <div class="halfBottom">
+            <div class="games" ng-repeat="game in gamesArr1">
+              <a href = "#/match/{{game.homeTeam}}/vs/{{game.awayTeam}}/on/{{game.gameTime}}" style="text-decoration: none">
+                <div class="scoreBoard">
+                  <div class="scoreRow">
+                    <div class="teamLogo">
+                      <img src="teams/{{game.home_squad}}.png">
+                    </div>
+                    <div class="teamName"> {{game.home_squad}}</div>
+                    <div class="teamScore"> {{game.home_score}}</div>
+                  </div>
+                  <div class="scoreRow">
+                    <div class="teamLogo">
+                      <img src="teams/{{game.away_squad}}.png">
+                    </div>
+                    <div class="teamName">{{game.away_squad}}</div>
+                    <div class="teamScore">{{game.away_score}}</div>
+                  </div>
+                  <div class="scoreRow">
+                    <div class="playedOn">{{game.played_on}}</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="halfBottom">
+            <div class="games" ng-repeat="game in gamesArr2">
+              <a href = "#/match/{{game.homeTeam}}/vs/{{game.awayTeam}}/on/{{game.gameTime}}" style="text-decoration: none">
+                <div class="scoreBoard" ng-click="go('/match/{{game.homeTeam}}/vs/{{game.awayTeam}}/on/{{game.gameTime}}')">
+                  <div class="scoreRow">
+                    <div class="teamLogo">
+                      <img src="teams/{{game.home_squad}}.png">
+                    </div>
+                    <div class="teamName"> {{game.home_squad}}</div>
+                    <div class="teamScore"> {{game.home_score}}</div>
+                  </div>
+                  <div class="scoreRow">
+                    <div class="teamLogo">
+                      <img src="teams/{{game.away_squad}}.png">
+                    </div>
+                    <div class="teamName">{{game.away_squad}}</div>
+                    <div class="teamScore">{{game.away_score}}</div>
+                  </div>
+                  <div class="scoreRow">
+                    <div class="playedOn">{{game.played_on}}</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>

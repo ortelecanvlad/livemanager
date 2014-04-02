@@ -1,0 +1,37 @@
+<div class="container" style="background-image:url(backgrounds/scoreboard.jpg); background-size: cover; background-position:center">
+        <div class="topContainerMatch">
+          <div class="halfTopContainer">
+            <div class="leftTeamLogo">
+              <img src="teams/large/{{homeTeam}}.png" />
+            </div>
+            <div class="leftTeamName">{{homeTeam}}</div>
+            <div class="leftTeamScore">{{homeScore}}</div>
+          </div>
+          <div class="halfTopContainer">
+            <div class="rightTeamScore">{{awayScore}}</div>
+            <div class="rightTeamName">{{awayTeam}}</div>
+            <div class="rightTeamLogo">
+              <img src="teams/large/{{awayTeam}}.png" />
+            </div>   
+          </div>
+        </div>
+        <div class="middleContainer">{{gameDate}}</div>
+        <div class="bottomContainerMatch">
+          <div class="halfBottom">
+            <div class="playerContainer" ng-repeat="player in homePlayers">
+              <a href="#/playerstats/{{player}}/on/{{gameTime}}">
+                <div class="play" style="background-image:url(players/{{player}}.png); background-size: cover;">        
+                </div>   
+              </a>
+            </div>
+          </div>
+          <div class="halfBottom">
+            <div class="playerContainer" ng-repeat="player in awayPlayers">
+              <a href="#/playerstats/{{player}}/on/{{gameTime}}">
+                <div class="play" style="background-image:url(players/{{player}}.png); background-size: cover;">  
+                </div>
+               </a> 
+            </div>
+          </div>
+        </div>
+      </div>

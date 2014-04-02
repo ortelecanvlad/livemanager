@@ -1,0 +1,54 @@
+<div class="container" style="background-image:url(backgrounds/soccerfield.jpg); background-size: cover; background-position:center"> 
+
+        <div class="halfContainer">
+          <div class="title">
+            <div class="playerNameString">{{nameOfPlayer}}</div>
+            <div class="gameScore">
+              <div class="titleSting"> {{homeTeam}} </div>
+              <div class="centerScore">
+                <div class="scoreString"> {{homeScore}} </div>
+                <div class="titleSting"> - </div>
+                <div class="scoreString"> {{awayScore}} </div>
+              </div>
+              <div class="titleSting">{{awayTeam}}</div>
+            </div> 
+            <div class="playerNameString">{{gameDate}}</div>
+          </div>
+          <div class="firstStats">
+            <div class="playerPictureAndTotal">
+              <div class="playerPicture" style="background-image:url(players/effect/{{interestPlayerId}}.png); background-size: cover; background-position:center"> 
+              </div>
+              <div class="total" style="background-image:url(images/white50.png); background-repeat: repeat;">
+                <div class="totalString">Total points:</div>
+                <div class="totalPoints" ng-class="{negativeTotal: totalPoints < 0}">{{totalPoints}}</div>
+              </div>
+            </div>
+            <div class="pieChart">
+              <canvas id="playerPieChart" width="500px" height="500px"</canvas>
+            </div>
+            <div class="arangeLegend" style="background-image:url(images/white50.png); background-repeat: repeat;">
+              <div class="pointTitlePositive">Positive points</div>
+              <div class="pieChartLegend" ng-repeat="legendItem in legend">
+                <div class="legendRow">
+                  <div class="legendColor" style="background-color: {{legendItem.color}}"></div>
+                  <div class="legendValue">{{legendItem.value}}</div>
+                  <div class="legendText">{{legendItem.action}}</div>
+                </div> 
+              </div>
+              <div class="pointTitleNegative" ng-class="{hide: noShowNegative}">Negative points</div>
+              <div class="pieChartLegend" ng-repeat="legendItem in negatives">
+                <div class="legendRow">
+                  <div class="legendColorNegative" style="background-color: #000000"></div>
+                  <div class="legendValue">{{legendItem.value}}</div>
+                  <div class="legendText">{{legendItem.action}}</div>
+                </div> 
+              </div>
+            </div>
+          </div> 
+          
+        </div>
+
+        <div class="halfContainer">
+          <canvas id="playerLineChart" width="1400px" height="500px"></canvas>
+        </div>
+      </div>
